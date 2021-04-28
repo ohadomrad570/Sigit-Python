@@ -171,6 +171,8 @@ class HandleSocketClient(HandleClient):
 
             # Call to addAccount() bank's method
             status, account = self._bank.addAccount(account_name, key, secret_code)
+            if status == Bank.Bank.accountAdded:
+                self.saveData()
             self._send_data(aClient, status)
 
         return account
