@@ -18,13 +18,6 @@ class HandleClient(ABC):
         """
         pass
 
-    @abstractmethod
-    def saveData(self):
-        """
-        This method save the additional data from a client
-        """
-        pass
-
 """
 This class inherit the HandleClient class and implement the server side protocol at our project
 """
