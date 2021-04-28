@@ -157,7 +157,7 @@ class MyParallelServer(MyCommonServer):
 
 # Testing
 def main():
-    server = MySerialServer("127.0.0.1", 8000)
+    server = MyParallelServer("127.0.0.1", 8000)
     bank = Bank.Bank.bank_from_file()
     myHandle = HandleClient.HandleSocketClient(bank)
     server.start(myHandle)
